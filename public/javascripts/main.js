@@ -23,6 +23,7 @@ $(document).ready(function() {
  
     success: function(response) {
         console.log('ajax success');
+        console.log('response is' + response.path);
         if(response.error) {
             status('Opps, something bad happened');
             return;
