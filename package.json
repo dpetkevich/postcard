@@ -10,7 +10,8 @@
     "ejs": "*",
     "pdfcrowd": "1.1.0",
     "node-fs": "0.1.7",
-    "jitsu": "0.13.1"
+    "jitsu": "0.13.1",
+    "connect":"2.3.9"
   },
   "subdomain": "postcard",
   "engines": {
