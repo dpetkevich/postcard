@@ -22,14 +22,14 @@ $(document).ready(function() {
     },
  
     success: function(response) {
- 
+        console.log('ajax success');
         if(response.error) {
             status('Opps, something bad happened');
             return;
         }
  
         var imageUrlOnServer = response.path;
- 
+    console.log(imageUrlOnServer);
 	status('Success, file uploaded to:' + imageUrlOnServer);
 	$('#uploaded_image').attr('src', imageUrlOnServer);
     }
