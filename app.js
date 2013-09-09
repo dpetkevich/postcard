@@ -33,7 +33,7 @@ app.post('/generate_pdf', function(req, res){
 
   console.log('fun');
    console.log(req.body.html.replace(/(\r\n|\n|\r)/gm,""));
-//client.convertHtml(req.body.html.replace(/(\r\n|\n|\r)/gm,""), pdf.saveToFile(__dirname + '/public/pdfs/googlecom.pdf'));
+client.convertHtml(req.body.html.replace(/(\r\n|\n|\r)/gm,""), pdf.saveToFile(__dirname + '/public/pdfs/googlecom.pdf'));
 res.download(__dirname + '/public/pdfs/googlecom.pdf','report.pdf');
 });
 
@@ -58,27 +58,7 @@ app.post('/', function (req, res) {
 
     })
    );
-   /* require('fs').rename(
-  req.files.userPhoto.path,
-  (__dirname +'/public' + serverPath),
-  function(error) {
-    console.log("new path" +  req.files.userPhoto.path )
-            if(error) {
-    res.send({
-                    error: 'Ah crap! Something bad happened'
-    });
-                return;
-                console.log('didnt work');
-            }
  
-            res.send({
-    path: serverPath
-   
-            });
-             console.log('worked');
-  }
-    );
-*/
 });
     //var photo_path=req.files.pic.path;
     //req.files.pic.path=(__dirname+'/public/images/photo1jpg');
