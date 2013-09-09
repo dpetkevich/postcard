@@ -1,0 +1,22 @@
+{
+  "name": "application-name",
+  "version": "0.0.1-11",
+  "private": false,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0beta7",
+    "ejs": "*",
+    "pdfcrowd": "1.1.0",
+    "node-fs": "0.1.7",
+    "jitsu": "0.13.1"
+  },
+  "subdomain": "postcard",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "license": "BSD"
+}
