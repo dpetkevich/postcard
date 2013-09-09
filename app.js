@@ -49,12 +49,20 @@ app.post('/', function (req, res) {
         var serverPath =  '/images/' + req.files.userPhoto.name;
   console.log("name is " + req.files.userPhoto.name);
   console.log("server path " + __dirname +'/public' + serverPath);
-    require('fs').rename(
+   
+   require('fs').rename(req.files.userPhoto.path,(__dirname + '/public' + serverPath),
+
+    res.send(
+    {
+      path: serverPath
+
+    })
+   );
+   /* require('fs').rename(
   req.files.userPhoto.path,
   (__dirname +'/public' + serverPath),
   function(error) {
     console.log("new path" +  req.files.userPhoto.path )
-    console.log('error occured');
             if(error) {
     res.send({
                     error: 'Ah crap! Something bad happened'
@@ -70,6 +78,7 @@ app.post('/', function (req, res) {
              console.log('worked');
   }
     );
+*/
 });
     //var photo_path=req.files.pic.path;
     //req.files.pic.path=(__dirname+'/public/images/photo1jpg');
